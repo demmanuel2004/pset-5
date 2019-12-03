@@ -28,7 +28,7 @@ window.onload = function() {
 const sayHello = function() {
 let text = prompt("Message: ");
 
-if (text.length =< 50){
+if (text.length <= 50 && text.length >= 1){
 let ctx = document.getElementById("student-canvas-1").getContext('2d');
 ctx.font = "40px sans-serif";
 ctx.strokeText(text, 30, 70, 1024);
