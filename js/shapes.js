@@ -40,7 +40,17 @@ ctx.strokeText(text, 30, 70, 1024);
  */
 
 const drawRectangle = function() {
-    // write your exercise 2 code here
+  let height = prompt("Height: ");
+  let width = prompt("Width: ");
+  let xfactor = prompt("X: ");
+  let yfactor = prompt("Y: ");
+
+const canvas = document.getElementById('canvas');
+
+const ctx = document.getElementById("rectangle-sample").getContext('2d');
+
+ctx.fillRect(10, 10, 150, 100);
+}
 };
 
 /*
