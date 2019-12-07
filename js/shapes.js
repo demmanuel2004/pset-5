@@ -19,7 +19,7 @@ document.getElementById("pyramid-sample").onclick = drawPyramidStaff;
 // equivalent set of six event listeners for your solutions. the first one is done for you.
 
 document.getElementById("hello").onclick = sayHello;
-document.getElementById("rectangle").onclick = drawRectangle;
+ document.getElementById("rectangle").onclick = drawRectangle;
 document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
 document.getElementById("triangle").onclick = drawTriangle;
 }
