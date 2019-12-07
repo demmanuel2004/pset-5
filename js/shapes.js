@@ -26,16 +26,28 @@ window.onload = function() {
  * Exercise 1.
  */
 
-const sayHello = function() {
+
+const sayHello = function () {
+
+
+let flag = true;
+while ( flag ) {
 let text = prompt("Message: ");
-
-if (text.length <= 50 && text.length >= 1){
+if (text.length <= 50 && text.length >= 1) {
 let ctx = document.getElementById("student-canvas-1").getContext('2d');
-ctx.font = "40px sans-serif";
-ctx.strokeText(text, 30, 70, 1024);
+ctx.font = "48px sans-serif";
+ctx.clearRect(0, 0, 1024, 128);
+ctx.strokeText(text, 30, 70, 994); //1024-30
+flag = false;
+} else {
+if( text.length > 50) {
+alert('Your message is too long. Keep it under 50 characters.');
+} else {
+alert('You did not enter anything');
 }
 }
-
+}
+}
 /*
  * Exercise 2.
  */
