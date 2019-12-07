@@ -53,17 +53,79 @@ alert('You did not enter anything');
  * Exercise 2.
  */
 
-const drawRectangle = function() {
-  let height = prompt("Height: ");
-  let width = prompt("Width: ");
-  let xfactor = prompt("X: ");
-  let yfactor = prompt("Y: ");
+const drawRectangle = function () {
+
+let flag = true;
+while (flag) {
+let width = prompt("Width: ");
+let height = prompt("Height: ");
+let xfactor = prompt("X: ");
+let yfactor = prompt("Y: ");
+
+if (isNaN(width) || isNaN(height) || isNaN(xfactor) || isNaN(yfactor)) {
+alert('One of your values is not a number');
+continue;
+}
+
+if (width.length == 0) {
+alert('Width must be between 1 and 1024');
+continue;
+}
+
+if (height.length == 0) {
+alert('Height must be between 1 and 512');
+continue;
+}
+
+if (xfactor.length == 0) {
+alert('X can not be less than 1');
+continue;
+}
+
+if (yfactor.length == 0) {
+alert('Y can not be less than 1');
+continue;
+}
+
+width = parseInt(width);
+height = parseInt(height);
+xfactor = parseInt(xfactor);
+yfactor = parseInt(yfactor);
+
+if (width < 1 || width > 1024) {
+alert('Width must be between 1 and 1024');
+continue;
+}
+
+if (height < 1 || height > 512) {
+alert('Height must be between 1 and 512');
+continue;
+}
+
+if (xfactor < 1) {
+alert('X can not be less than 1');
+continue;
+}
+
+if (yfactor < 1) {
+alert('Y can not be less than 1');
+continue;
+}
+
+var lLimit = width + xfactor; // 36 +4=40 // (x,y)=(10,20) , width =40 ,40+10
+var hLimit = height + yfactor;
+
+if (hLimit > 512 || lLimit > 1024) {
+alert("Your rectangle won't fit on the canvas.");
+continue;
+}
 
 const canvas = document.getElementById('canvas');
 
-const ctx = document.getElementById("rectangle-sample").getContext('2d');
-
-ctx.fillRect(10, 10, 150, 100);
+const ctx = document.getElementById("student-canvas-2").getContext('2d');
+ctx.clearRect(0, 0, 1024, 512);
+ctx.strokeRect(xfactor, yfactor, width, height);
+flag = false;
 }
 };
 
