@@ -138,7 +138,7 @@ const drawColoredRectangle = function() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   do {
-    var color = (prompt("Color: "))
+    var color = prompt("Color: "));
     if (color == null) {
       break;
     }
