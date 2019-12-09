@@ -142,14 +142,14 @@ const drawColoredRectangle = function() {
       break;
     }
     color = String(color)
-    var color_formatted = color.toUpperCase()
-    if (color_formatted != "GREEN" && color_formatted != "BLACK" && color_formatted != "BLUE" && color_formatted != "ORANGE" && color_formatted != "PURPLE" && color_formatted != "RED" && color_formatted != "YELLOW") {
+    var color_upper = color.toUpperCase()
+    if (color_upper != "GREEN" && color_upper != "BLACK" && color_upper != "BLUE" && color_upper != "ORANGE" && color_upper!= "PURPLE" && color_upper != "RED" && color_upper != "YELLOW") {
       alert(color + " is not a supported color.")
     }
-  } while (color_formatted != "GREEN" && color_formatted != "BLACK" && color_formatted != "BLUE" && color_formatted != "ORANGE" && color_formatted != "PURPLE" && color_formatted != "RED" && color_formatted != "YELLOW")
+  } while (color_upper != "GREEN" && color_upper != "BLACK" && color_upper != "BLUE" && color_upper != "ORANGE" && color_upper != "PURPLE" && color_upper != "RED" && color_upper != "YELLOW")
 
   if (color != null) {
-    ctx.fillStyle = color_formatted;
+    ctx.fillStyle = color_upper;
     ctx.fillRect(10, 10, 100, 50);
   }
 };
