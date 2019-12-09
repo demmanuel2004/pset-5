@@ -132,6 +132,7 @@ flag = false;
  * Exercise 3.
  */
 const drawColoredRectangle = function() {
+  
   const canvas = document.getElementById('student-canvas-3');
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
