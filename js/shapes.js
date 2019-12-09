@@ -128,7 +128,6 @@ ctx.strokeRect(xfactor, yfactor, width, height);
 flag = false;
 }
 };
-
 /*
  * Exercise 3.
  */
