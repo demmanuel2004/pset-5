@@ -64,7 +64,7 @@ let xfactor = prompt("X: ");
 let yfactor = prompt("Y: ");
 
 if (isNaN(width) || isNaN(height) || isNaN(xfactor) || isNaN(yfactor)) {
-alert('One of your values is not a number');
+alert('One of your values is not a number.');
 continue;
 }
 
