@@ -132,8 +132,29 @@ flag = false;
  * Exercise 3.
  */
 const drawColoredRectangle = function() {
-    // write your exercise 4 code here
-};
+   
+    const canvas = document.getElementById('student-canvas-3');
+   const ctx2 = canvas.getContext('2d');
+   ctx2.clearRect(0, 0, canvas.width, canvas.height);
+
+   do {
+     var input_color = (prompt("Color: "))
+     if (input_color == null) {
+       break;
+     }
+     color = String(input_color)
+     var input_color = input_color.toUpperCase()
+     if (color != "GREEN" && color != "BLACK" && color != "BLUE" && color != "ORANGE" && color != "PURPLE" && color != "RED" && color != "YELLOW") {
+       alert(color + " is not a supported color.")
+     }
+   } while (color != "GREEN" && color != "BLACK" && color != "BLUE" && color != "ORANGE" && color != "PURPLE" && color != "RED" && color != "YELLOW")
+
+   if (input_color != null) {
+     ctx2.fillStyle = color;
+     ctx2.fillRect(10, 10, 100, 50);
+   }
+ };
+
 
 /*
  * Exercise 4.
