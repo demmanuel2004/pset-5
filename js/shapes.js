@@ -134,7 +134,37 @@ flag = false;
  */
 
 const drawColoredRectangle = function() {
-    // write your exercise 3 code here
+
+let flag = true;
+  while (flag) {
+let color = prompt("Color: ");
+  }
+    
+let width = 100px;
+let height = 50px);
+
+ if (isNaN(black) || isNaN(blue) || isNaN(green) || isNaN(orange)||isNaN(purple)|| isNaN(red)||isNaN(purple)||isNaN(yellow)) {
+alert('You have not entered a valid color');
+continue;
+    
+
+var lLimit = width + xfactor;
+var hLimit = height + yfactor;
+
+if (hLimit > 512 || lLimit > 1024) {
+alert("Your rectangle won't fit on the canvas.");
+continue;
+}
+    
+const canvas = document.getElementById('canvas');
+
+const ctx = document.getElementById("student-canvas-3").getContext('2d');
+ctx.clearRect(0, 0, 1024, 512);
+ctx.strokeRect(color);
+flag = false;
+}
+};
+}
 };
 
 /*
