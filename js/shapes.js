@@ -132,29 +132,27 @@ flag = false;
  * Exercise 3.
  */
 const drawColoredRectangle = function() {
-   
-    const canvas = document.getElementById('student-canvas-3');
-   const ctx2 = canvas.getContext('2d');
-   ctx2.clearRect(0, 0, canvas.width, canvas.height);
+  const canvas = document.getElementById('student-canvas-3');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-   do {
-     var input_color = (prompt("Color: "))
-     if (input_color == null) {
-       break;
-     }
-     color = String(input_color)
-     var input_color = input_color.toUpperCase()
-     if (color != "GREEN" && color != "BLACK" && color != "BLUE" && color != "ORANGE" && color != "PURPLE" && color != "RED" && color != "YELLOW") {
-       alert(color + " is not a supported color.")
-     }
-   } while (color != "GREEN" && color != "BLACK" && color != "BLUE" && color != "ORANGE" && color != "PURPLE" && color != "RED" && color != "YELLOW")
+  do {
+    var color = (prompt("Color: "))
+    if (color == null) {
+      break;
+    }
+    color = String(color)
+    var color_formatted = color.toUpperCase()
+    if (color_formatted != "GREEN" && color_formatted != "BLACK" && color_formatted != "BLUE" && color_formatted != "ORANGE" && color_formatted != "PURPLE" && color_formatted != "RED" && color_formatted != "YELLOW") {
+      alert(color + " is not a supported color.")
+    }
+  } while (color_formatted != "GREEN" && color_formatted != "BLACK" && color_formatted != "BLUE" && color_formatted != "ORANGE" && color_formatted != "PURPLE" && color_formatted != "RED" && color_formatted != "YELLOW")
 
-   if (input_color != null) {
-     ctx2.fillStyle = color;
-     ctx2.fillRect(10, 10, 100, 50);
-   }
- };
-
+  if (color != null) {
+    ctx.fillStyle = color_formatted;
+    ctx.fillRect(10, 10, 100, 50);
+  }
+};
 
 /*
  * Exercise 4.
