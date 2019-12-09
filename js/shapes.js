@@ -1,6 +1,7 @@
 window.onload = function() {
-    document.getElementById("hello-sample").onclick = sayHelloStaff;
-    document.getElementById("rectangle-sample").onclick = drawRectangleStaff;
+
+document.getElementById("hello-sample").onclick = sayHelloStaff;
+document.getElementById("rectangle-sample").onclick = drawRectangleStaff;
 document.getElementById("colored-rectangle-sample").onclick = drawColoredRectangleStaff;
 document.getElementById("triangle-sample").onclick = drawTriangleStaff;
 document.getElementById("smile-sample").onclick = drawFaceStaff;
