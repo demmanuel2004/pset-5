@@ -46,7 +46,7 @@ const sayHello = function() {
             if (text.length > 50) {
                 alert('Your message is too long. Keep it under 50 characters.');
             } else {
-                alert('You did not enter anything');
+                alert('You did not enter anything.');
             }
         }
     }
@@ -70,22 +70,22 @@ const drawRectangle = function() {
         }
 
         if (width.length == 0) {
-            alert('Width must be between 1 and 1024');
+            alert('Width must be between 1 and 1024.');
             continue;
         }
 
         if (height.length == 0) {
-            alert('Height must be between 1 and 512');
+            alert('Height must be between 1 and 512.');
             continue;
         }
 
         if (xfactor.length == 0) {
-            alert('X can not be less than 1');
+            alert('X can not be less than 1.');
             continue;
         }
 
         if (yfactor.length == 0) {
-            alert('Y can not be less than 1');
+            alert('Y can not be less than 1.');
             continue;
         }
 
@@ -95,22 +95,22 @@ const drawRectangle = function() {
         yfactor = parseInt(yfactor);
 
         if (width < 1 || width > 1024) {
-            alert('Width must be between 1 and 1024');
+            alert('Width must be between 1 and 1024.');
             continue;
         }
 
         if (height < 1 || height > 512) {
-            alert('Height must be between 1 and 512');
+            alert('Height must be between 1 and 512.');
             continue;
         }
 
         if (xfactor < 1) {
-            alert('X can not be less than 1');
+            alert('X can not be less than 1.');
             continue;
         }
 
         if (yfactor < 1) {
-            alert('Y can not be less than 1');
+            alert('Y can not be less than 1.');
             continue;
         }
 
@@ -169,12 +169,12 @@ const drawTriangle = function() {
         let c = prompt("Side 3: ");
 
         if (isNaN(a) || isNaN(b) || isNaN(c)) {
-            alert("That's not a valid right triangle");
+            alert("That's not a valid right triangle.");
             continue;
         }
 
         if (a.length == 0 || b.length == 0 || c.length == 0) {
-            alert("That's not a valid right triangle");
+            alert("That's not a valid right triangle.");
             continue;
         }
 
@@ -184,17 +184,17 @@ const drawTriangle = function() {
         c = parseInt(c);
 
         if (a < 1 || a > 1024) {
-            alert("Please enter value less between 1 and 1024");
+            alert("Please enter value less between 1 and 1024.");
             continue;
         }
 
         if (b < 1 || b > 1024) {
-            alert("Please enter value less between 1 and 1024");
+            alert("Please enter value less between 1 and 1024.");
             continue;
         }
 
         if (c < 1 || c > 1024) {
-            alert("Please enter value less between 1 and 1024");
+            alert("Please enter value less between 1 and 1024.");
             continue;
         }
 
@@ -214,13 +214,13 @@ const drawTriangle = function() {
         var lhs = Math.pow(a, 2);
         var rhs = Math.pow(b, 2) + Math.pow(c, 2);
         if (lhs != rhs) {
-            alert("That's not a valid right triangle");
+            alert("That's not a valid right triangle.");
             continue;
         }
 
 
         if (c > 999) {
-            alert("Triangle will not fit in canvas");
+            alert("Triangle will not fit in canvas.");
             continue;
         }
 
