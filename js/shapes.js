@@ -233,7 +233,6 @@ ctx.stroke();
 flag = false;
 }
 };
-};
 
 /*
  * Exercise 5.
