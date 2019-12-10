@@ -114,7 +114,7 @@ alert('Y can not be less than 1');
 continue;
 }
 
-var lLimit = width + xfactor; // 36 +4=40 // (x,y)=(10,20) , width =40 ,40+10
+var lLimit = width + xfactor; 
 var hLimit = height + yfactor;
 
 if (hLimit > 512 || lLimit > 1024) {
@@ -178,7 +178,7 @@ alert("That's not a valid right triangle");
 continue;
 }
 
-//Check if between 1 and 1024
+
 a = parseInt(a);
 b = parseInt(b);
 c = parseInt(c);
@@ -199,36 +199,36 @@ continue;
 }
 
 
-//Get the 3 greatest number
+
 var numbers = [ a , b, c];
 numbers.sort(function(x, y){return y-x});
 
-//Reassign the numbers, a is largest, c is height, b is base
-a = numbers[0];// number[0]=a
+
+a = numbers[0];
 b = numbers[1];
 c = numbers[2];
 
-//Check if a2 = b2 + c2
-var lhs = Math.pow(a, 2);//a*a // a is hyp , b is base and c is perp
-var rhs = Math.pow(b, 2) + Math.pow(c, 2); // hyp*hyp = base*base + perp*perp
+
+var lhs = Math.pow(a, 2);
+var rhs = Math.pow(b, 2) + Math.pow(c, 2); 
 if( lhs != rhs) {
 alert("That's not a valid right triangle");
 continue;
 }
 
-//Check if it will fit in canvas
-if( c > 999 ) { //1024-25
+
+if( c > 999 ) { 
 alert("Triangle will not fit in canvas");
 continue;
 }
 
-//draw a triangle
+
 const ctx = document.getElementById("student-canvas-4").getContext('2d');
 ctx.clearRect(0, 0, 1024, 512);
 ctx.beginPath();
 ctx.moveTo(25, 25);
-ctx.lineTo( 25, c + 25); // drwing perp
-ctx.lineTo(25 + b , c + 25 ); //drawing hyp
+ctx.lineTo( 25, c + 25); 
+ctx.lineTo(25 + b , c + 25 ); 
 ctx.closePath();
 ctx.stroke();
 flag = false;
