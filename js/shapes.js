@@ -160,10 +160,8 @@ const drawColoredRectangle = function() {
 /*
  * Exercise 4.
  */
-
 const drawTriangle = function() {
-    const drawTriangle = function() {
-// write your exercise 4 code here
+
 let flag = true;
 while (flag) {
 let a = prompt("Side 1: ");
@@ -200,34 +198,37 @@ alert("Please enter value less between 1 and 1024");
 continue;
 }
 
+
+//Get the 3 greatest number
 var numbers = [ a , b, c];
 numbers.sort(function(x, y){return y-x});
 
-a = numbers[0];
+//Reassign the numbers, a is largest, c is height, b is base
+a = numbers[0];// number[0]=a
 b = numbers[1];
 c = numbers[2];
 
-
-var lhs = Math.pow(a, 2);p
-var rhs = Math.pow(b, 2) + Math.pow(c, 2); 
+//Check if a2 = b2 + c2
+var lhs = Math.pow(a, 2);//a*a // a is hyp , b is base and c is perp
+var rhs = Math.pow(b, 2) + Math.pow(c, 2); // hyp*hyp = base*base + perp*perp
 if( lhs != rhs) {
 alert("That's not a valid right triangle");
 continue;
 }
 
-
-if( c > 999 ) { 
+//Check if it will fit in canvas
+if( c > 999 ) { //1024-25
 alert("Triangle will not fit in canvas");
 continue;
 }
 
-
+//draw a triangle
 const ctx = document.getElementById("student-canvas-4").getContext('2d');
 ctx.clearRect(0, 0, 1024, 512);
 ctx.beginPath();
 ctx.moveTo(25, 25);
-ctx.lineTo( 25, c + 25); 
-ctx.lineTo(25 + b , c + 25 ); 
+ctx.lineTo( 25, c + 25); // drwing perp
+ctx.lineTo(25 + b , c + 25 ); //drawing hyp
 ctx.closePath();
 ctx.stroke();
 flag = false;
