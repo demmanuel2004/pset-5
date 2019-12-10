@@ -162,7 +162,77 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
-    // write your exercise 4 code here
+    const drawTriangle = function() {
+// write your exercise 4 code here
+let flag = true;
+while (flag) {
+let a = prompt("Side 1: ");
+let b = prompt("Side 2: ");
+let c = prompt("Side 3: ");
+
+if (isNaN(a) || isNaN(b) || isNaN(c)) {
+alert("That's not a valid right triangle");
+continue;
+}
+
+if (a.length == 0 || b.length == 0 || c.length == 0) {
+alert("That's not a valid right triangle");
+continue;
+}
+
+//Check if between 1 and 1024
+a = parseInt(a);
+b = parseInt(b);
+c = parseInt(c);
+
+if (a < 1 || a > 1024) {
+alert("Please enter value less between 1 and 1024");
+continue;
+}
+
+if (b < 1 || b > 1024) {
+alert("Please enter value less between 1 and 1024");
+continue;
+}
+
+if (c < 1 || c > 1024) {
+alert("Please enter value less between 1 and 1024");
+continue;
+}
+
+var numbers = [ a , b, c];
+numbers.sort(function(x, y){return y-x});
+
+a = numbers[0];
+b = numbers[1];
+c = numbers[2];
+
+
+var lhs = Math.pow(a, 2);p
+var rhs = Math.pow(b, 2) + Math.pow(c, 2); 
+if( lhs != rhs) {
+alert("That's not a valid right triangle");
+continue;
+}
+
+
+if( c > 999 ) { 
+alert("Triangle will not fit in canvas");
+continue;
+}
+
+
+const ctx = document.getElementById("student-canvas-4").getContext('2d');
+ctx.clearRect(0, 0, 1024, 512);
+ctx.beginPath();
+ctx.moveTo(25, 25);
+ctx.lineTo( 25, c + 25); 
+ctx.lineTo(25 + b , c + 25 ); 
+ctx.closePath();
+ctx.stroke();
+flag = false;
+}
+};
 };
 
 /*
