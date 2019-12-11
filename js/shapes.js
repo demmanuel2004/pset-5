@@ -240,61 +240,8 @@ const drawTriangle = function() {
 /*
  * Exercise 5.
  */
-const drawFace = function() {
-// write your exercise 4 code here
-let flag = true;
-while (flag) {
-let r = prompt("Radius: ");
 
-if ( isNaN(r) ) {
-alert("Your radius must be at least 32");
-continue;
-}
-
-if (r.length == 0 ) {
-alert("Your radius must be at least 32");
-continue;
-}
-
-//Check if between 1 and 1024 //diameter =1024 ,radius =512 ,height =512 ,radius=256
-r = parseInt(r);
-
-if (r < 32 || r > 512) {
-alert("Please enter value less between 32 and 512");
-continue;
-}
-
-if( r > 256 ) {
-alert("Smiley won't fit into the canvas");
-continue;
-}
-
-
-//draw the circle
-const ctx = document.getElementById("student-canvas-5").getContext('2d');
-ctx.clearRect(0, 0, 1024, 512); //rect( xstarting point , y strtng point , width , height )
-ctx.beginPath();
-ctx.arc(512, 256, r, 0, 2 * Math.PI); //angle is in radian
-ctx.stroke();
-
-//draw mouth
-ctx.beginPath();
-ctx.arc(512, 256, r * .7, 0, 1 * Math.PI); //radius of mouth is 70 % of head
-ctx.stroke();
-
-//draw left eye
-ctx.beginPath();
-ctx.arc(512 - .4 * r, 256 - .4 * r, r * .15, 0, 2 * Math.PI);
-ctx.stroke();
-
-ctx.beginPath();
-ctx.arc(512 + .4 * r, 256 - .4 * r, r * .15, 0, 2 * Math.PI);
-ctx.stroke();
-
-flag = false;
-}
-};
-   
+ /*  
  * Exercise 6 (extra credit).
  */
 
