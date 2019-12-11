@@ -240,8 +240,6 @@ const drawTriangle = function() {
 /*
  * Exercise 5.
  */
-
-const drawFace = function() {
 const drawFace = function() {
         // write your exercise 4 code here
         let flag = true;
@@ -403,7 +401,7 @@ const drawFace = function() {
                     flag = false;
                 }
             };
-        };
+   
  * Exercise 6 (extra credit).
  */
 
