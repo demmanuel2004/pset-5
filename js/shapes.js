@@ -60,11 +60,7 @@ const drawRectangle = function() {
     let flag = true;
     
      const canvas = document.getElementById('canvas');
-
-        const ctx = document.getElementById("student-canvas-2").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 128);
-        ctx.strokeRect(xfactor, yfactor, width, height);
-
+    
     while (flag) {
         let width = prompt("Width: ");
         let height = prompt("Height: ");
@@ -130,7 +126,10 @@ const drawRectangle = function() {
             continue;
         }
 
-        
+        const ctx = document.getElementById("student-canvas-2").getContext('2d');
+        ctx.clearRect(0, 0, 1024, 128);
+        ctx.strokeRect(xfactor, yfactor, width, height);
+
         flag = false;
     }
 };
