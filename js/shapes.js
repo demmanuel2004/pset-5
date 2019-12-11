@@ -40,7 +40,7 @@ const sayHello = function() {
             let ctx = document.getElementById("student-canvas-1").getContext('2d');
             ctx.font = "48px sans-serif";
             ctx.clearRect(0, 0, 1024, 128);
-            ctx.strokeText(text, 30, 70, 994); //1024-30
+            ctx.strokeText(text, 30, 70, 994);
             flag = false;
         } else {
             if (text.length > 50) {
@@ -58,12 +58,20 @@ const sayHello = function() {
 const drawRectangle = function() {
 
     let flag = true;
+    
+     const canvas = document.getElementById('canvas');
+
+        const ctx = document.getElementById("student-canvas-2").getContext('2d');
+        ctx.clearRect(0, 0, 1024, 512);
+        ctx.strokeRect(xfactor, yfactor, width, height);
+
     while (flag) {
         let width = prompt("Width: ");
         let height = prompt("Height: ");
         let xfactor = prompt("X: ");
         let yfactor = prompt("Y: ");
-
+        
+       
         if (isNaN(width) || isNaN(height) || isNaN(xfactor) || isNaN(yfactor)) {
             alert('One of your values is not a number.');
             continue;
@@ -122,11 +130,7 @@ const drawRectangle = function() {
             continue;
         }
 
-        const canvas = document.getElementById('canvas');
-
-        const ctx = document.getElementById("student-canvas-2").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 512);
-        ctx.strokeRect(xfactor, yfactor, width, height);
+        
         flag = false;
     }
 };
