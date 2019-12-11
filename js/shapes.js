@@ -62,7 +62,7 @@ const drawRectangle = function() {
      const canvas = document.getElementById('canvas');
 
         const ctx = document.getElementById("student-canvas-2").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 512);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.strokeRect(xfactor, yfactor, width, height);
 
     while (flag) {
