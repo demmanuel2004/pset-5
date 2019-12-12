@@ -57,6 +57,9 @@ const sayHello = function () {
 
 const drawRectangle = function () {
 
+    const ctx = document.getElementById("student-canvas-2").getContext('2d');
+    ctx.clearRect(0, 0, 1024, 512);
+   
     let flag = true;
     while (flag) {
         let width = prompt("Width: ");
@@ -121,11 +124,7 @@ const drawRectangle = function () {
             alert("Your rectangle won't fit on the canvas.");
             continue;
         }
-
         const canvas = document.getElementById('canvas');
-
-        const ctx = document.getElementById("student-canvas-2").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 512);
         ctx.strokeRect(xfactor, yfactor, width, height);
         flag = false;
     }
@@ -137,7 +136,8 @@ const drawRectangle = function () {
 
 const drawColoredRectangle = function() {
     // write your exercise 3 code here
-  
+  const ctx = document.getElementById("student-canvas-3").getContext('2d');
+        ctx.clearRect(0, 0, 1024, 128);
     let flag = true;
     while (flag) {
         let color = prompt("Color: ");
@@ -155,9 +155,6 @@ const drawColoredRectangle = function() {
         }
 
         const canvas = document.getElementById('canvas');
-
-        const ctx = document.getElementById("student-canvas-3").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 128);
         ctx.fillStyle = color;
         ctx.fillRect(10, 10, 100, 50);
         flag = false;
@@ -170,6 +167,9 @@ const drawColoredRectangle = function() {
 
 const drawTriangle = function() {
     // write your exercise 4 code here
+    const ctx = document.getElementById("student-canvas-4").getContext('2d');
+    ctx.clearRect(0, 0, 1024, 512);
+    
     let flag = true;
     while (flag) {
         let a = prompt("Side 1: ");
@@ -231,8 +231,6 @@ const drawTriangle = function() {
         } 
 
         //draw a triangle
-        const ctx = document.getElementById("student-canvas-4").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 512);
         ctx.beginPath();
         ctx.moveTo(25, 25);
         ctx.lineTo( 25, c + 25);
@@ -250,6 +248,9 @@ const drawTriangle = function() {
 
 const drawFace = function() {
     // write your exercise 4 code here
+   const ctx = document.getElementById("student-canvas-5").getContext('2d');
+   ctx.clearRect(0, 0, 1024, 512);
+    
     let flag = true;
     while (flag) {
         let r = prompt("Radius: ");
@@ -279,8 +280,6 @@ const drawFace = function() {
 
 
         //draw the circle
-        const ctx = document.getElementById("student-canvas-5").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 512);
         ctx.beginPath();
         ctx.arc(512, 256, r, 0, 2 * Math.PI);
         ctx.stroke();
@@ -309,6 +308,9 @@ const drawFace = function() {
 
 const drawPyramid = function() {
     // write your exercise 5 code here
+    const ctx = document.getElementById("student-canvas-6").getContext('2d');
+        ctx.clearRect(0, 0, 1024, 512);
+    
     let flag = true;
     while (flag) {
         let side = prompt("Side: ");
@@ -338,8 +340,7 @@ const drawPyramid = function() {
 
 
         //draw the pyramid
-        const ctx = document.getElementById("student-canvas-6").getContext('2d');
-        ctx.clearRect(0, 0, 1024, 512);
+        
         // ctx.strokeRect( 512 - 10 - ( 50 ) , 10 + ( ( 1 - 1 ) * side ) , side, side);
         // return;
 
