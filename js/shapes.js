@@ -31,15 +31,15 @@ window.onload = function() {
  */
 
 const sayHello = function () {
-    
+     let ctx = document.getElementById("student-canvas-1").getContext('2d');
+            ctx.font = "48px sans-serif";
+            ctx.clearRect(0, 0, 1024, 128);
 
     let flag = true;
     while ( flag ) {
         let text = prompt("Message: ");
         if (text.length <= 50 && text.length >= 1) {
-            let ctx = document.getElementById("student-canvas-1").getContext('2d');
-            ctx.font = "48px sans-serif";
-            ctx.clearRect(0, 0, 1024, 128);
+           
             ctx.strokeText(text, 30, 70, 994); //1024-30
             flag = false;
         } else {
